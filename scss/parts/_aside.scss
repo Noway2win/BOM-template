@@ -1,0 +1,30 @@
+.aside {
+  display: none;
+  padding: 2rem 0 0 2rem;
+  box-sizing: border-box;
+  background-color: $mainColor;
+  border-radius: 5px;
+  border: solid 5px $white;
+  border-bottom: none;
+  border-top: none;
+  @media ($desktop) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: block;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+  &__title {
+    @include h2($white);
+    margin-bottom: 2rem;
+  }
+  &__points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-item {
+      @include a();
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.prise {
+  background-color: $mainColor;
+  border-radius: 1rem;
+  width: 300px;
+  padding: 1.6rem 0.2rem 2rem 0.2rem;
+
+  &__title {
+    @include h3($white);
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 1.7rem;
+  }
+  &__cost {
+    background-color: $white;
+    height: 7rem;
+    width: 100%;
+    color: $mainColor;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 7rem;
+    &::before {
+      content: "$";
+    }
+  }
+  &__options {
+    @include p2($white);
+    line-height: 1.71;
+    font-style: normal;
+    padding-left: 3.3rem;
+    padding-right: 3.6rem;
+    &-item {
+      text-align: left;
+    }
+  }
+  &__btn {
+    @extend %btn;
+    display: block;
+    margin: 1rem 1.5rem 0 1.5rem;
+  }
+}

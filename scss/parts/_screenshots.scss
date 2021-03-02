@@ -1,0 +1,22 @@
+.screenshots {
+  background-color: $white;
+  padding: 3rem;
+  padding-left: 1rem;
+  @media ($tablet) {
+    padding-left: 3rem;
+    padding-right: 1rem;
+  }
+  &__items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    @media ($largeDesktop) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__header {
+    @include h2();
+    margin-bottom: 2rem;
+  }
+}

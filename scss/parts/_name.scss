@@ -1,0 +1,59 @@
+.name {
+  background-color: $mainColor;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  padding-top: 8.6rem;
+  @media ($tablet) {
+    flex-direction: row;
+    padding: 3rem;
+    padding-top: 8.6rem;
+    justify-content: space-between;
+  }
+  @media ($desktop) {
+    padding-top: 3rem;
+  }
+  &__text {
+    width: 100%;
+    margin-bottom: 2rem;
+    &-header {
+      @include h1();
+      margin-bottom: 1rem;
+      line-height: 0.7;
+      @media ($tablet) {
+        margin-bottom: 5rem;
+      }
+    }
+    &-points {
+      @include headP();
+      &-item {
+        &::before {
+          content: "\2713";
+        }
+      }
+    }
+    @media ($tablet) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    min-height: 20rem;
+    overflow: hidden;
+    background-color: $lightGrey;
+    @include img();
+    @media ($tablet) {
+      max-width: 40%;
+      width: auto;
+      height: auto;
+      min-height: 30rem;
+    }
+    @media ($desktop) {
+      min-height: 23rem;
+    }
+  }
+}

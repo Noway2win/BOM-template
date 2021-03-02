@@ -1,0 +1,42 @@
+@import "./styles/utils/index.scss";
+@import "./styles/components/index.scss";
+.container {
+  width: 100%;
+  background-color: rgba(221, 255, 29, 0.24);
+  text-align: center;
+}
+.title {
+  text-decoration: underline;
+  color: black;
+  font-size: 3rem;
+}
+h1 {
+  @include h1();
+}
+h2 {
+  @include h2();
+}
+h2:first-of-type {
+  @include h2($align: left);
+}
+h3 {
+  @include h3();
+}
+.p1 {
+  @include p1();
+}
+.p2 {
+  @include p2();
+}
+.headP {
+  @include headP();
+}
+.btn {
+  @extend %btn;
+}
+.input-field {
+  @extend %input-field;
+}
+.textarea {
+  @extend %textarea;
+}

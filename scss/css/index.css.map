@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../parts/index.scss",
+        "../parts/_name.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

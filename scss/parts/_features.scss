@@ -1,0 +1,23 @@
+.features {
+  background-color: $lightGrey;
+  padding-left: 1rem;
+  padding-top: 1.5rem;
+  @media ($tablet) {
+    padding-left: 3rem;
+  }
+  &__header {
+    @include h2();
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+  &__list {
+    padding-right: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    @media ($tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      row-gap: 0;
+    }
+  }
+}

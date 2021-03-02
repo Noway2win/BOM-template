@@ -1,0 +1,44 @@
+.about {
+  background-color: $white;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+  @media ($tablet) {
+    grid-template-columns: 3fr 2fr;
+    gap: 1rem;
+    padding: 3rem;
+  }
+  &__text {
+    width: 100%;
+    &-header {
+      @include h2($align: left);
+      margin-bottom: 2rem;
+    }
+    &-p {
+      @include p1();
+      padding: 1rem 0;
+      text-align: justify;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+    @media ($tablet) {
+      grid-column: 1/2;
+      width: 80%;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    min-height: 20rem;
+    background-color: $mainColor;
+    @include img();
+    @media ($tablet) {
+      width: 100%;
+      height: auto;
+      min-height: 15rem;
+      grid-column: 2/3;
+    }
+  }
+}
